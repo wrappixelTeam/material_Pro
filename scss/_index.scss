@@ -1,0 +1,212 @@
+// SIDEBAR- STYLES
+
+.sidebar{
+    width: 274px;
+    .sidebar-wrapper{
+        height: 100vh;
+        height: 100vh;
+        overflow: hidden auto;
+        position: -webkit-sticky;
+        position: sticky;
+
+        &::-webkit-scrollbar{
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track{
+            background-color: transparent;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #7777776b;
+            border-radius: 20px;
+            border: transparent;
+        }
+    }
+    
+}
+
+.offcanvas-body{
+
+    &::-webkit-scrollbar{
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track{
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: #7777776b;
+        border-radius: 20px;
+        border: transparent;
+    }
+}
+
+.sidebar_footer{
+    background-color: #f1f1f1;
+    position: fixed;
+    bottom: 0;
+    width: 278px;
+}
+
+// Main Dashboard styles
+
+
+// User Block
+.user-block{
+    width: 100%;
+    background-image: url("../../dist/images/sidebar/sidebar_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .info{
+        background-color: rgb(1,4,4,0.37);
+    }
+}
+
+// sidebar-nav styles
+.label,.sidebar-item,li{
+    list-style-type: none;
+}
+// sidebar-nav-dropdown-styles
+.sidebar-link{
+    border-radius: 5px;
+    color: #99ABB4;
+
+     .extreme-right{
+        transform: rotate(0deg);
+        transition: transform 0.3s ease;
+     }
+  &.active{
+    background-color: #26C6DA;
+    color: white;
+      .extreme-right{
+        transform: rotate(-90deg);
+     }
+     img{
+        filter: brightness(10);
+     }
+
+  }
+}
+.first-label{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: all 0.3s ease;
+    a{
+        color: #99ABB4;
+        &:hover{
+            color: #67757C;
+        }
+    }
+  .wrapper{
+     overflow: hidden;
+  }
+  &.in{
+    grid-template-rows:1fr;
+  }
+}
+
+
+
+// Main Dashboard Section //
+
+// Dashboard Block
+.bharat-icon{
+    width: 88%;
+}
+
+// dashboard chart-styles
+.chart-wrapper{
+    width: 65px;
+}
+
+// Bandwidth
+
+
+// Dashboard major block styles
+
+.card-block{
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 0px 50px 0px rgba(33, 150, 243, 0.10);
+}
+
+// Business Development styles
+.business-development{
+    .business-bg{
+        position: relative;
+        top: -30px;
+    }
+}
+
+// Third row - Weather Block Styles
+.weather-block{
+    .upper-block{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+// contacts styles
+.my-contacts{
+    .user-icon{
+        top: 5px;
+    }
+    .active-icon{
+        top: 5px;
+    }
+}
+
+// Activity
+.activity-block{
+    .upper-block{
+        border-bottom: 1px solid rgba(153, 171, 180, 0.20);
+        .activity{
+            border-bottom: 2px solid $primary;
+        }
+    }
+
+    .activity-wrapper{
+        position: relative;
+        &::after{
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 18px;
+        width: 2px;
+        height: 100%;
+        background: rgba(153, 171, 180, 0.20);
+        }
+    }
+
+}
+
+// offcanvas style
+
+.search-offcanvas{
+    height: 85px !important;
+
+    .offcanvas-header{
+        height: 100%;
+
+        input{
+            height: 100%;
+            font-size: 25px;
+            outline: none;
+
+            &:hover{
+                border: none;
+            }
+        }
+    }
+}
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+
+// dropdown-menu
+    .menus{
+        width: 300px;
+        border: none;
+    }
