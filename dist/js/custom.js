@@ -34,8 +34,53 @@ const handleClick = (e) => {
     }
    }
 
+   // modified-click version
+
+const handlemodified = (e) => {
+   const element = e.target;
+   const modifiedsidebar_link = document.querySelectorAll(".sidebar-link");
+   const modifiedsidebar_link_arr = Array.from(modifiedsidebar_link);
+
+ let data =   modifiedsidebar_link_arr.filter((elem) => {
+      return elem!==element;
+   })
+
+   data.forEach((elem) => {
+      elem.classList.remove("active");
+      let nextElem = elem.nextElementSibling;
+      nextElem.classList.remove("in");
+   })
+
+   if(element.classList.contains("extreme-right")){
+         let finalelem = element.parentElement;
+          finalelem.classList.toggle("active");
+         let nextElem = finalelem.nextElementSibling;
+         nextElem.classList.toggle("in");
+   }
+   else if(element.classList.contains("sidebar-link")){
+      element.classList.toggle("active");
+      let nextElem = element.nextElementSibling;
+      nextElem.classList.toggle("in");
+   }
+   else if(element.classList.contains("extreme-left")){
+        let firstelem = element.parentElement;
+        let secondelem = firstelem.parentElement;
+        secondelem.classList.toggle("active");
+        let nextElem = secondelem.nextElementSibling;
+        nextElem.classList.toggle("in");
+   }
+   else{
+      let firstelem = element.parentElement;
+      let secondelem = firstelem.parentElement;
+      secondelem.classList.toggle("active");
+      let nextElem = secondelem.nextElementSibling;
+      nextElem.classList.toggle("in");
+   }
+}
+
+
 sidebar_link_arr.forEach((elem)=>{
-    elem.addEventListener("click",handleClick);
+    elem.addEventListener("click",handlemodified);
 })
 
 
