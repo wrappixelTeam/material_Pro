@@ -166,10 +166,19 @@
                 <!-- User Block -->
                 <div class="user-block">
                     <img src="../dist/images/sidebar/user icon.svg" alt="user-icon" class="img-fluid mt-14 ms-13 mb-15">
-                    <div class="info d-flex justify-content-between py-10 px-13">
+                    <div class="infos d-flex justify-content-between py-10 px-13">
                         <p class="mb-0 fs-11 fw-medium text-white">Markarn Doe</p>
-                        <a href="#"><img src="../dist/images/sidebar/caret_down.svg" alt="caret_down"
-                                class="img-fluid align-self-center fs-7"></a>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="../dist/images/sidebar/caret_down.svg" alt="caret_down" class="img-fluid align-self-center fs-7">
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                          </div>
+                        <!-- end -->
                     </div>
                 </div>
 
