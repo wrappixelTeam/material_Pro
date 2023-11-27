@@ -70,6 +70,14 @@
     background-image: url("../../dist/images/sidebar/sidebar_bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+  .dropdown-menu{
+    a{
+        &:hover{
+          background-color: rgba(128, 128, 128, 0.158);
+        }
+      }
+  
+  }
 
     .infos{
         background-color: rgb(1,4,4,0.37);
@@ -306,17 +314,6 @@
         }
     }
 
-    // Grid-dropdown
-
-    // .grid-dropdown{
-    //     position: relative;
-
-    //     .dropdown{
-    //         width: 100vw;
-    //         position: absolute;
-    //         bottom: 0;
-    //     }
-    // }
 
     // Grid-dropdown
 
@@ -397,4 +394,13 @@
                }
             }
         }
+    }
+
+    // dropdown divider
+    .dropdown-divider {
+        height: 0;
+        margin: 8px 0;
+        overflow: hidden;
+        border-top: 1px solid #e9ecef;
+        opacity: 1;
     }
