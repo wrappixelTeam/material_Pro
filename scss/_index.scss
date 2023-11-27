@@ -1,7 +1,22 @@
 // SIDEBAR- STYLES
 
 .sidebar{
-    width: 274px;
+    width: 0px;
+    position: fixed;
+    overflow: hidden;
+    transition: all 0.1s ease;
+    z-index: 1;
+
+    &.active{
+        width: 274px;
+    }
+
+    @include media-breakpoint-down(md){
+        &.active{
+            width: 274px;
+        }
+    }
+
     .sidebar-wrapper{
         height: 100vh;
         height: 100vh;
@@ -41,8 +56,8 @@
 
 .sidebar_footer{
     background-color: #f1f1f1;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: 84px;
     width: 278px;
 }
 
@@ -209,4 +224,177 @@
     .menus{
         width: 300px;
         border: none;
+    }
+
+    .country-dropdown{
+        border: none;
+        background-color: #ffff;
+    }
+
+    // dashboard
+
+    .dashboard{
+        margin-left: 0px;
+        transition: all 0.1s ease;
+        &.in{
+            margin-left: 274px;            
+        }
+
+        @include media-breakpoint-down(md){
+            &.in{
+                margin-left: 0px;            
+            }
+        }
+
+    }
+
+    // header-styles
+
+    header{
+        .grid-icon{
+            @include media-breakpoint-down(sm){
+                display: none;
+            }
+        }
+    }
+
+    // tabs styles
+    
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+        border: 0px solid transparent;
+        border-bottom: 2px solid #1e88e5;
+        color: #1e88e5;
+        
+        img{
+            filter: invert(66%) sepia(54%) saturate(7130%) hue-rotate(187deg) brightness(93%) contrast(93%);
+        }
+    }
+
+    .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link:hover{
+        color: #1e88e5;
+        border-right-color: transparent;
+        border-left-color: transparent;
+        img{
+            filter: invert(66%) sepia(54%) saturate(7130%) hue-rotate(187deg) brightness(93%) contrast(93%);
+        }
+     }
+
+    .info{
+        border-right: 1px solid #e9ecef;
+        border-left: 1px solid #e9ecef;
+    }
+
+    // activity
+
+    .activity-logo{
+       z-index: 1;
+    }
+    // 
+    .tab-pane{
+        input,textarea,select{
+            outline: none !important;
+            border-radius: 0 !important;
+            &::placeholder{
+                color: #99ABB4 !important;
+                opacity: 1 !important;
+            }
+            &:focus{
+                border-bottom: 2px solid $primary !important;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    // Grid-dropdown
+
+    // .grid-dropdown{
+    //     position: relative;
+
+    //     .dropdown{
+    //         width: 100vw;
+    //         position: absolute;
+    //         bottom: 0;
+    //     }
+    // }
+
+    // Grid-dropdown
+
+    .grid-megadropdown{
+        position: fixed;
+        width: 100%;
+        background-color: rgb(255 255 255);
+        top: 83px;
+        left: 0;
+        z-index: 3;
+    }
+
+    .owl-nav{
+        position: absolute;
+        top: 0;
+        button.owl-prev{
+            position: absolute;
+            top: 6rem;
+            span{
+                font-size: 50px;
+                font-weight: 200;
+            }
+            &:hover{
+                background:none !important;
+                text-decoration: none !important;
+                color: black !important;
+            }
+        }
+        button.owl-next{
+            position: absolute;
+            left: 24rem;
+            top: 6rem;
+            font-size: 20px;
+            span{
+                font-size: 50px;
+                font-weight: 200;
+            }
+            &:hover{
+                background:none !important;
+                text-decoration: none !important;
+                color: black !important;
+            }
+        }
+    }
+
+    // Acccordian
+
+    .accordion-button:focus {
+        z-index: 3;
+        border-color: none;
+        outline: 0;
+        box-shadow: none;
+    }
+
+    // Grid-Mega-Dropdown
+
+    .grid-megadropdown{
+        display: none;
+        visibility: hidden;
+        &.grid{
+            display: block;
+            visibility: visible;
+        }
+        input,textarea{
+            &:focus{
+                border: 1px solid #67757C;
+                box-shadow: none !important;
+            }
+        }
+    }
+
+    // list style
+    .list-style{
+        a{
+            &:hover{
+               span{
+                   color: #26C6DA !important;
+               }
+            }
+        }
     }

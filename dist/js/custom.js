@@ -41,22 +41,26 @@ sidebar_link_arr.forEach((elem)=>{
 
 // Navigation
 
-// const menu = document.querySelector(".menu-icon");
-// const sidebar = document.querySelector(".sidebar");
-// const header = document.querySelector("header");
+const menu = document.querySelector(".menu-icon");
+const sidebar = document.querySelector(".sidebar");
+const header = document.querySelector("header");
+const grid_icon = document.querySelector(".grid-icon");
+const grid_megadropdown = document.querySelector(".grid-megadropdown");
 
-// const dashboard = document.querySelector(".dashboard");
-// const main_dashboard = document.querySelector(".main-dashboard");
-// // console.log(main_dashboard);
-// // let width = (window.innerWidth - 274);
-// // document.getElementById("main").style.width = `${width}px`;
+const dashboard = document.querySelector(".dashboard");
+const main_dashboard = document.querySelector(".main-dashboard");
 
+console.log(dashboard);
 
-// const handleNav = () => {
-//    sidebar.classList.toggle("active");
-//    header.classList.toggle("in");
+const handleNav = () => {
+   sidebar.classList.toggle("active");
+   dashboard.classList.toggle("in");
+}
 
-// }
+const handledropdown = () => {
+   grid_megadropdown.classList.toggle("grid");
+}
 
-// menu.addEventListener("click",handleNav);
+menu.addEventListener("click",handleNav);
+grid_icon.addEventListener("click" , handledropdown);
 
