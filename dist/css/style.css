@@ -25932,11 +25932,6 @@ a {
 .dashboard.in {
   margin-left: 274px;
 }
-@media (max-width: 767.98px) {
-  .dashboard.in {
-    margin-left: 0px;
-  }
-}
 
 @media (max-width: 575.98px) {
   header .grid-icon {

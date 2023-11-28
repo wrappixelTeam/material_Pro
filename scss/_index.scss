@@ -251,12 +251,6 @@
             margin-left: 274px;            
         }
 
-        @include media-breakpoint-down(md){
-            &.in{
-                margin-left: 0px;            
-            }
-        }
-
     }
 
     // header-styles
