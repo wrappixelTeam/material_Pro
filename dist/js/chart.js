@@ -431,7 +431,17 @@ chart.render();
     marker: {
       show: false
     }
-  }
+  },
+  responsive: [
+    {
+      breakpoint: 991,
+      options: {
+        chart: {
+          width: 90,
+        },
+      },
+    },
+  ],
   };
 
   var chart5 = new ApexCharts(document.querySelector("#download-chart"), options5);
