@@ -80,7 +80,7 @@ const handlemodified = (e) => {
 
 
 sidebar_link_arr.forEach((elem)=>{
-    elem.addEventListener("click",handlemodified);
+    elem.addEventListener("click",handleClick);
 })
 
 
