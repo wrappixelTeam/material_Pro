@@ -3,36 +3,36 @@ const first_label = document.querySelector(".first-label");
 const sidebar_link = document.querySelectorAll(".sidebar-link");
 const sidebar_link_arr = Array.from(sidebar_link);
 
-const handleClick = (e) => {
+// const handleClick = (e) => {
  
 
-    const element = e.target;
-    if(element.classList.contains("extreme-right")){
-          let finalelem = element.parentElement;
-           finalelem.classList.toggle("active");
-          let nextElem = finalelem.nextElementSibling;
-          nextElem.classList.toggle("in");
-    }
-    else if(element.classList.contains("sidebar-link")){
-       element.classList.toggle("active");
-       let nextElem = element.nextElementSibling;
-       nextElem.classList.toggle("in");
-    }
-    else if(element.classList.contains("extreme-left")){
-         let firstelem = element.parentElement;
-         let secondelem = firstelem.parentElement;
-         secondelem.classList.toggle("active");
-         let nextElem = secondelem.nextElementSibling;
-         nextElem.classList.toggle("in");
-    }
-    else{
-       let firstelem = element.parentElement;
-       let secondelem = firstelem.parentElement;
-       secondelem.classList.toggle("active");
-       let nextElem = secondelem.nextElementSibling;
-       nextElem.classList.toggle("in");
-    }
-   }
+//     const element = e.target;
+//     if(element.classList.contains("extreme-right")){
+//           let finalelem = element.parentElement;
+//            finalelem.classList.toggle("active");
+//           let nextElem = finalelem.nextElementSibling;
+//           nextElem.classList.toggle("in");
+//     }
+//     else if(element.classList.contains("sidebar-link")){
+//        element.classList.toggle("active");
+//        let nextElem = element.nextElementSibling;
+//        nextElem.classList.toggle("in");
+//     }
+//     else if(element.classList.contains("extreme-left")){
+//          let firstelem = element.parentElement;
+//          let secondelem = firstelem.parentElement;
+//          secondelem.classList.toggle("active");
+//          let nextElem = secondelem.nextElementSibling;
+//          nextElem.classList.toggle("in");
+//     }
+//     else{
+//        let firstelem = element.parentElement;
+//        let secondelem = firstelem.parentElement;
+//        secondelem.classList.toggle("active");
+//        let nextElem = secondelem.nextElementSibling;
+//        nextElem.classList.toggle("in");
+//     }
+//    }
 
    // modified-click version
 
@@ -41,17 +41,22 @@ const handlemodified = (e) => {
    const modifiedsidebar_link = document.querySelectorAll(".sidebar-link");
    const modifiedsidebar_link_arr = Array.from(modifiedsidebar_link);
 
- let data =   modifiedsidebar_link_arr.filter((elem) => {
-      return elem!==element;
-   })
 
-   data.forEach((elem) => {
-      elem.classList.remove("active");
-      let nextElem = elem.nextElementSibling;
-      nextElem.classList.remove("in");
-   })
+
 
    if(element.classList.contains("extreme-right")){
+      let finalelem = element.parentElement;
+       let data =   modifiedsidebar_link_arr.filter((elem) => {
+         return elem!==finalelem;
+      })
+   
+      data.forEach((elem) => {
+         elem.classList.remove("active");
+         let nextElem = elem.nextElementSibling;
+         nextElem.classList.remove("in");
+      })
+
+      if(element.classList.contains("extreme-right")){
          let finalelem = element.parentElement;
           finalelem.classList.toggle("active");
          let nextElem = finalelem.nextElementSibling;
@@ -76,11 +81,130 @@ const handlemodified = (e) => {
       let nextElem = secondelem.nextElementSibling;
       nextElem.classList.toggle("in");
    }
+
+}
+else if(element.classList.contains("sidebar-link")){
+   let data =   modifiedsidebar_link_arr.filter((elem) => {
+      return elem!==element;
+   })
+
+   data.forEach((elem) => {
+      elem.classList.remove("active");
+      let nextElem = elem.nextElementSibling;
+      nextElem.classList.remove("in");
+   })
+   if(element.classList.contains("extreme-right")){
+      let finalelem = element.parentElement;
+       finalelem.classList.toggle("active");
+      let nextElem = finalelem.nextElementSibling;
+      nextElem.classList.toggle("in");
+}
+else if(element.classList.contains("sidebar-link")){
+   element.classList.toggle("active");
+   let nextElem = element.nextElementSibling;
+   nextElem.classList.toggle("in");
+}
+else if(element.classList.contains("extreme-left")){
+     let firstelem = element.parentElement;
+     let secondelem = firstelem.parentElement;
+     secondelem.classList.toggle("active");
+     let nextElem = secondelem.nextElementSibling;
+     nextElem.classList.toggle("in");
+}
+else{
+   let firstelem = element.parentElement;
+   let secondelem = firstelem.parentElement;
+   secondelem.classList.toggle("active");
+   let nextElem = secondelem.nextElementSibling;
+   nextElem.classList.toggle("in");
+}
+
+}
+else if(element.classList.contains("extreme-left")){
+     let firstelem = element.parentElement;
+     let secondelem = firstelem.parentElement;
+     let data =   modifiedsidebar_link_arr.filter((elem) => {
+      return elem!==secondelem;
+   })
+
+   data.forEach((elem) => {
+      elem.classList.remove("active");
+      let nextElem = elem.nextElementSibling;
+      nextElem.classList.remove("in");
+   })
+
+   if(element.classList.contains("extreme-right")){
+      let finalelem = element.parentElement;
+       finalelem.classList.toggle("active");
+      let nextElem = finalelem.nextElementSibling;
+      nextElem.classList.toggle("in");
+}
+else if(element.classList.contains("sidebar-link")){
+   element.classList.toggle("active");
+   let nextElem = element.nextElementSibling;
+   nextElem.classList.toggle("in");
+}
+else if(element.classList.contains("extreme-left")){
+     let firstelem = element.parentElement;
+     let secondelem = firstelem.parentElement;
+     secondelem.classList.toggle("active");
+     let nextElem = secondelem.nextElementSibling;
+     nextElem.classList.toggle("in");
+}
+else{
+   let firstelem = element.parentElement;
+   let secondelem = firstelem.parentElement;
+   secondelem.classList.toggle("active");
+   let nextElem = secondelem.nextElementSibling;
+   nextElem.classList.toggle("in");
+}
+}
+else{
+   let firstelem = element.parentElement;
+   let secondelem = firstelem.parentElement;
+   let data =   modifiedsidebar_link_arr.filter((elem) => {
+      return elem!==secondelem;
+   })
+
+   data.forEach((elem) => {
+      elem.classList.remove("active");
+      let nextElem = elem.nextElementSibling;
+      nextElem.classList.remove("in");
+   })
+
+   if(element.classList.contains("extreme-right")){
+      let finalelem = element.parentElement;
+       finalelem.classList.toggle("active");
+      let nextElem = finalelem.nextElementSibling;
+      nextElem.classList.toggle("in");
+}
+else if(element.classList.contains("sidebar-link")){
+   element.classList.toggle("active");
+   let nextElem = element.nextElementSibling;
+   nextElem.classList.toggle("in");
+}
+else if(element.classList.contains("extreme-left")){
+     let firstelem = element.parentElement;
+     let secondelem = firstelem.parentElement;
+     secondelem.classList.toggle("active");
+     let nextElem = secondelem.nextElementSibling;
+     nextElem.classList.toggle("in");
+}
+else{
+   let firstelem = element.parentElement;
+   let secondelem = firstelem.parentElement;
+   secondelem.classList.toggle("active");
+   let nextElem = secondelem.nextElementSibling;
+   nextElem.classList.toggle("in");
+}
+}
+
+
 }
 
 
 sidebar_link_arr.forEach((elem)=>{
-    elem.addEventListener("click",handleClick);
+    elem.addEventListener("click",handlemodified);
 })
 
 
@@ -108,4 +232,13 @@ const handledropdown = () => {
 
 menu.addEventListener("click",handleNav);
 grid_icon.addEventListener("click" , handledropdown);
+
+window.addEventListener('resize', function(event){
+    if(this.window.innerWidth<=991){
+      sidebar.classList.remove("active");
+    }
+    else{
+      sidebar.classList.add("active");
+    }
+ });
 
